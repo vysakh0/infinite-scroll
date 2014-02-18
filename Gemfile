@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'ember-rails'
 gem 'ember-source', '1.3.0'
+gem 'faker'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
