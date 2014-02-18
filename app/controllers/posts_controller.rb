@@ -3,8 +3,11 @@ class PostsController < ApplicationController
 
   # GET /posts
   # GET /posts.json
+  respond_to :json
   def index
-    @posts = Post.all
+    page = (params[:page] || 1).to_i
+    posts = Post.paginate(page: page, per_page: 7)
+    render json: posts, meta:  {total_pages: posts.total_pages, page: page}
   end
 
   # GET /posts/1
