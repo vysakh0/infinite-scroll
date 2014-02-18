@@ -16,6 +16,7 @@ App.PaginationMixin = Ember.Mixin.create({
     var total = this.storeMetadata('total_pages');
     return page < total;
   },
+
   actions: {
     showMore: function() {
       var self = this;
@@ -25,7 +26,7 @@ App.PaginationMixin = Ember.Mixin.create({
         var page = this.storeMetadata('page') + 1;
         this.setStoreMetadata('page', page);
 
-        this.store.findQuery(this.get('modelNmae'), {
+        this.store.findQuery(this.get('modelName'), {
           page: page
         }).then(function (res) {
           self.set('paginationLoading', false);
