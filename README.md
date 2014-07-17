@@ -18,7 +18,7 @@ Scrollable mixin, calls the action that is in pagination mixin to load data acco
 
 ```bash
 git clone git@github.com:vysakh0/infinite-scroll.git
-cd ininite-scroll
+cd infinite-scroll
 bundle
 rake db:migrate
 rake seed:data  # to populate random data
